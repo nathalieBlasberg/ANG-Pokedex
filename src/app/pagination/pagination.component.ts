@@ -19,7 +19,7 @@ export class PaginationComponent {
   }
 
   public isButtonVisible(pageNumber: number): boolean {
-    return pageNumber > 0 && this.currentPage + 2 >= pageNumber && this.currentPage - 2 <= pageNumber;
+    return pageNumber >= 1 && this.currentPage + 2 >= pageNumber && this.currentPage - 2 <= pageNumber;
   }
 
 }

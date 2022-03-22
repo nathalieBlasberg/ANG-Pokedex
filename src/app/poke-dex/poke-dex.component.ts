@@ -28,7 +28,7 @@ export class PokeDexComponent implements OnInit {
   public onFetchedPokemonData(pokeList: Pokedex): void {
     this.pokedexList$ = pokeList.results;
     this.numberPages = Math.ceil(pokeList.count / 20);
-    this.currentPage = Math.floor(this.offset / this.limit) + 1;
+    this.currentPage = Math.floor(this.offset / this.limit);
     this.pagesList = Array(Math.ceil(pokeList.count / 20)).fill(0).map((x,i)=>i);
   }
 

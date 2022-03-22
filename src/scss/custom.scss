@@ -13,6 +13,12 @@ $text-dark: $dark;
     background-size: auto 32%;
 }
 
+@mixin button {
+    background-color: $dark;
+    border-color: $dark;
+    color: $font-color;
+}
+
 .navbar-dark .navbar-brand {
     color: $font-color;
 }
@@ -21,23 +27,29 @@ $text-dark: $dark;
     @include mountain();
 }
 
-.btn-dark {
-    background-color: $dark;
-    border-color: $dark;
+.btn-dark, .btn-light.active {
+    @include button();
     text-transform: uppercase;
-    color: $font-color;
 }
 
-.btn-dark:hover {
+.btn-dark:hover, .btn-light:hover  {
     color: $dark;
     background-color: $font-color;
     border-color: $font-color;
+    background-image: none;
 }
 
-.btn-light, .btn-light:hover {
+.btn-light {
     color: $dark;
+    border: solid url("/assets/poke-bg-paper.jpg");
     background-image: url("/assets/poke-bg-paper.jpg");
 }
+
+.btn-light.active {
+    @include button();
+    @include mountain();
+}
+
 
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";

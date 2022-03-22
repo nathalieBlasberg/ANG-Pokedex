@@ -7,14 +7,15 @@
                 (click)="onButtonClick(offset - 20)">prev</button>
         </div>
         <ng-container *ngFor="let number of pagesList">
-            <!-- TODO: erste Seite zeigt nicht 9 Elemente -->
-            <!-- TODO: Seite 57 wird nicht angezeigt -->
+            <!-- TODO: erste Seite zeigt nicht 5 Elemente -->
             <div 
                 class="col-1 p-0 d-flex justify-content-center"
-                *ngIf="isButtonVisible(number)">
+                *ngIf="isButtonVisible(number + 1)">
                 <button 
-                    type="button" class="btn btn-light"
-                    (click)="onButtonClick((number - 1) * 20)">{{number}}</button>
+                    type="button" 
+                    class="btn btn-light"
+                    [class.active]="offset === (number * 20)"
+                    (click)="onButtonClick((number) * 20)">{{number + 1}}</button>
             </div>
         </ng-container>
         <div class="col-2 p-0">
