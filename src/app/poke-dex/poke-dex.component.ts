@@ -30,7 +30,6 @@ export class PokeDexComponent implements OnInit {
     this.numberPages = Math.ceil(pokeList.count / 20);
     this.currentPage = Math.floor(this.offset / this.limit) + 1;
     this.pagesList = Array(Math.ceil(pokeList.count / 20)).fill(0).map((x,i)=>i);
-    console.log(this.offset);
   }
 
   public onButtonClick(newOffset: number): void {
@@ -44,9 +43,5 @@ export class PokeDexComponent implements OnInit {
 
     this.pokeData.fetchPokemonData(url)
     .subscribe(response => this.onFetchedPokemonData(response));
-  }
-
-  public isButtonVisible(pageNumber: number): boolean {
-    return pageNumber > 0 && this.currentPage + 2 >= pageNumber && this.currentPage - 2 <= pageNumber;
   }
 }
