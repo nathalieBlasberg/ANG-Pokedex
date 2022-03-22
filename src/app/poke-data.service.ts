@@ -6,12 +6,11 @@ import { Pokedex, PokeSprite } from './pokedex.model';
   providedIn: 'root'
 })
 export class PokeDataService {
-
-  baseUrl:string = "https://pokeapi.co/api/v2/"
+  public baseUrl:string = `https://pokeapi.co/api/v2/pokemon?`; 
 
   constructor(private http: HttpClient) { }
 
-  fetchPokemonData() {
-    return this.http.get<Pokedex>(`${this.baseUrl}pokemon?offset=0&limit=20`);
+  fetchPokemonData(url: string) {
+    return this.http.get<Pokedex>(`${this.baseUrl}${url}`);
   }
 }
