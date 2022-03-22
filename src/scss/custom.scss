@@ -54,3 +54,9 @@ $text-dark: $dark;
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
 @import "../../node_modules/bootstrap/scss/root";
+
+html, body {
+    font-family: 'Noto Serif', serif;
+    background: url(/assets/background/bg-weave-mid-to-light.jpg) repeat-x top center,
+                url(/assets/background/bg-weave-light.jpg) repeat top center;
+}
