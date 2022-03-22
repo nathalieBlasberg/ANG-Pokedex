@@ -1,0 +1,11 @@
+// Required
+@import "../../node_modules/bootstrap/scss/functions";
+
+$poke-color: #283c50;
+
+$dark: $poke-color;
+$text-dark: $poke-color;
+
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/root";
