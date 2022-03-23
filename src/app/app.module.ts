@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { PokeDexComponent } from './poke-dex/poke-dex.component';
 import { HeaderComponent } from './header/header.component';
 import { PaginationComponent } from './pagination/pagination.component';
+import { PokemonEntryComponent } from './pokemon-entry/pokemon-entry.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PokeDexComponent,
     HeaderComponent,
-    PaginationComponent
+    PaginationComponent,
+    PokemonEntryComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

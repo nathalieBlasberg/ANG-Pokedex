@@ -10,15 +10,50 @@ export interface PokedexList {
   url: string;
 }
 
-export interface PokeSprite {
+export interface Pokemon {
+  id: number;
+  name: string;
+  base_experience: number;
+  height: number;
+  weight: number;
+  abilities: {
+    ability: {
+      name: string;
+    }
+  }[];
+  held_items: {
+    item: {
+      name: string;
+    }
+  }[];
   sprites: {
-    back_default?: string;
-    back_female?: string;
-    back_shiny?: string;
-    back_shiny_female?: string;
-    front_default?: string;
-    front_female?: string;
-    front_shiny?: string;
-    front_shiny_female?: string;
+    front_default: string;
+    other: {
+      "official-artwork": {
+        front_default: string;
+      }
+    }
   };
+  types: {
+    type: {
+      name: string;
+    }
+  }[];
+}
+
+export interface PokemonSpecies {
+  flavor_text_entries:
+    {
+      flavor_text: string;
+      language: {
+        name: string;
+      }
+    }[];
+    
+  genera: {
+    genus: string;
+    language: {
+      name: string;
+    }
+  }[]
 }
