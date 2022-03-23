@@ -29,7 +29,7 @@ export class PokeDexComponent implements OnInit {
     this.pokedexList$ = pokeList.results;
     this.numberPages = Math.ceil(pokeList.count / 20);
     this.currentPage = Math.floor(this.offset / this.limit);
-    this.pagesList = Array(Math.ceil(pokeList.count / 20)).fill(0).map((x,i)=>i);
+    this.pagesList = Array(Math.ceil(pokeList.count / 20)).fill(0).map((_,i)=>i);
   }
 
   public onButtonClick(newOffset: number): void {
