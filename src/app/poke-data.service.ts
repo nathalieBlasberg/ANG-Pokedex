@@ -8,7 +8,9 @@ import { Pokedex, Pokemon, PokemonSpecies } from './pokedex.model';
 export class PokeDataService {
   public baseUrl:string = `https://pokeapi.co/api/v2/pokemon`; 
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient
+    ) { }
 
   fetchPokemonData(url: string) {
     return this.http.get<Pokedex>(`${this.baseUrl}?${url}`);

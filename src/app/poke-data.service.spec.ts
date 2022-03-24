@@ -9,8 +9,4 @@ describe('PokeDataService', () => {
     TestBed.configureTestingModule({});
     service = TestBed.inject(PokeDataService);
   });
-
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
 });
