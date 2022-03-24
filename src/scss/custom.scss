@@ -19,6 +19,11 @@ $text-dark: $dark;
     color: $font-color;
 }
 
+.nav-link, .nav-link:hover {
+    color: $font-color;
+    text-decoration: none;
+}
+
 .navbar-dark .navbar-brand {
     color: $font-color;
 }
@@ -59,4 +64,8 @@ html, body {
     font-family: 'Noto Serif', serif;
     background: url(/assets/background/bg-weave-mid-to-light.jpg) repeat-x top center,
                 url(/assets/background/bg-weave-light.jpg) repeat top center;
+}
+
+a {
+    text-decoration: none;
 }

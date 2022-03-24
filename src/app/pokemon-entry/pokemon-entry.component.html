@@ -3,9 +3,10 @@
         <div class="col col-sm-10 col-md-8">
             <div class="row pokedex-header mb-3">
                 <div class="col col-3 col-sm-2">No. {{pokemon$?.id}}</div>
-                <div class="col col-4 col-sm-2">{{pokemon$?.name}}</div>
+                <div class="col col-4 col-sm-2 col-md-3">{{pokemon$?.name}}</div>
                 <div class="col col-5 d-sm-none"></div>
-                <div class="col col-6 col-sm-4">{{pokeGenus}}</div>
+                <div class="col col-6 col-sm-4 col-md-3">{{pokeGenus}}</div>
+                <div *ngIf="pokemon$?.types?.length !== 2" class="col col-3 col-sm-2"></div>
                 <ng-container *ngFor="let pokeType of pokemon$?.types">
                     <div class="col col-3 col-sm-2">
                         <span class="text-uppercase">{{pokeType.type.name}}</span>
@@ -32,7 +33,7 @@
                         <div class="col text-capitalize">{{pokeAbility.ability.name}}</div>
                     </ng-container>
                     <ng-container *ngIf="pokemon$?.held_items?.length !== 0">
-                        <div class="col pokedex-tags mb-2">
+                        <div class="col pokedex-tags mt-3 mb-2">
                             <div class="text-center">Items carried</div>
                         </div>
                         <ng-container *ngFor="let pokeItems of pokemon$?.held_items">
@@ -42,7 +43,7 @@
                 </div>
             </div>
             <div class="row mt-3 mt-sm-5 justify-content-center">
-                    <div class="col-12">
+                    <div class="col">
                         <div class="col pokedex-list-border pokedex-list-text text-center p-3">{{pokeDescription}}</div>
                     </div>
             </div>
