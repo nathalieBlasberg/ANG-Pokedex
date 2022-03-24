@@ -5,8 +5,15 @@
     z-index: 1;
 }
 
-.pokedex-list-element {
+.pokedex-list-element, .pokemon-img-bg {
     background-image: url("/assets/poke-bg-paper.jpg");
     width: 100%;
     height: 100%;
+}
+
+.pokemon-img-bg {
+    img {
+        max-height: 200px;
+        max-width: 200px;
+    }
 }
