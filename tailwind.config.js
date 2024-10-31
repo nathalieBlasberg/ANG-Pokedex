@@ -1,9 +1,15 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: ["./src/**/*.{html,ts}"],
   theme: {
+    fontFamily: {
+      serif: ["Noto serif"],
+    },
     extend: {
       colors: {
+        hover: "#34a19c",
+        white: "#e5eaee",
         "dark-blue": "#283c50",
         black: "#3e3b3a",
         gold: "#d8c43d",
