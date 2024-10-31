@@ -1,0 +1,16 @@
+.pokedex-list-border {
+  border: 11px solid;
+  border-image: url(/assets/poke-bg-paper-with-corners.png) 22 repeat;
+  text-decoration: none;
+}
+
+.pokedex-billboard {
+  height: 100%;
+  width: 100%;
+  background-image: url(/assets/poke-bg-paper.jpg);
+
+  &.with-border {
+    border: 8px solid;
+    border-image: url(/assets/poke-border-light-blue-double.png) 16 round;
+  }
+}
