@@ -4,6 +4,7 @@
 /out-tsc
 
 # dependencies
+.angular
 /node_modules
 
 # IDEs and editors
