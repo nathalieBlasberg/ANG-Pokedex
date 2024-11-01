@@ -1,15 +1,15 @@
-<!-- <app-pagination
+<app-pagination
 [offset]="offset"
 [pagesList]="pagesList"
 [currentPage]="currentPage"
-(newButtonEvent)="onButtonClick($event)"></app-pagination> -->
-<div class="grid grid-cols-4 gap-4 mx-60">
-    <div  *ngFor="let pokemon of pokedexList$">
-        <a [routerLink]="['/pokemon', pokemon.name]">
-            <app-poke-dex-entry [resource]="pokemon"></app-poke-dex-entry>
-            <!-- <div class="row justify-content-center">
-                <div class="pokedex-list-border">
-                    div class="pokemon-img-bg d-flex justify-content-center">
+(newButtonEvent)="onButtonClick($event)"></app-pagination>
+
+<div class="container mb-2" *ngFor="let pokemon of pokedexList$">
+    <a [routerLink]="['/pokemon', pokemon.name]">
+        <div class="row justify-content-center">
+            <div class="col-11 col-md-9 col-lg-4">
+                <div class="row pokedex-list-border">
+                    <div class="pokemon-img-bg d-flex justify-content-center">
                         <img src={{pokemon.url}}>
                     </div>
                     <div class="pt-3 pb-2 d-flex 
@@ -19,13 +19,13 @@
                         <h3 class="text-capitalize text-dark">{{pokemon.name}}</h3>
                     </div>
                 </div>
-            </div> -->
-        </a>
-    </div>
+            </div>
+        </div>
+    </a>
 </div>
 
-<!-- <app-pagination
+<app-pagination
 [offset]="offset"
 [pagesList]="pagesList"
 [currentPage]="currentPage"
-(newButtonEvent)="onButtonClick($event)"></app-pagination> -->
+(newButtonEvent)="onButtonClick($event)"></app-pagination>
