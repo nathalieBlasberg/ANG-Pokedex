@@ -1,0 +1,19 @@
+<div class="pokedex-list-border">
+    <div class="pokedex-billboard with-border">
+        <img [src]="pokemon.sprites.other['official-artwork'].front_default"/>
+    </div>
+    <div class="pokedex-billboard pb-3">
+        <p class="mb-2 uppercase text-sm text-slate-600">
+            {{ pokemon.order | order }}
+        </p>
+        <p class="text-xl text-dark-blue capitalize mb-1">
+            {{ pokemon.name }}
+        </p>
+        <div class="flex">
+            <div *ngFor="let types of pokemon.types" 
+            class="{{colorForType[types.type.name]}} text-xs text-white font-medium me-1 px-2.5 py-0.5 rounded capitalize">
+                    {{ types.type.name }}
+            </div>
+        </div>
+    </div>
+</div>

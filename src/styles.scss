@@ -1,1 +1,55 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
+
+html,
+body {
+  font-family: "Noto Serif", serif;
+  background: url(/assets/background/bg-weave-mid-to-light.jpg) repeat-x top
+      center,
+    url(/assets/background/bg-weave-light.jpg) repeat top center;
+}
+
+@layer base {
+  @font-face {
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+  }
+}
+
+.mountain {
+  background-repeat: repeat-x;
+  background-position: center bottom;
+  background-size: auto 32%;
+
+  &.dark {
+    background-image: url(/assets/button/button-bg.png);
+    @apply bg-dark-blue;
+  }
+
+  &.light {
+    background-image: url(/assets/button/button-bg-light.png);
+    @apply bg-white;
+  }
+}
+
+.button {
+  @apply rounded-2xl font-bold px-5 py-3 uppercase justify-center text-center;
+
+  &.primary {
+    @apply bg-dark-blue text-white border-dark-blue;
+  }
+
+  &.secondary {
+    @apply bg-white border-white text-dark-blue;
+  }
+
+  &:hover {
+    background-image: none;
+    @apply cursor-pointer text-white bg-hover;
+  }
+}
